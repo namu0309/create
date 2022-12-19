@@ -25,9 +25,6 @@ class Particle {
     if (this.pos.y > height) {
       this.vel.y = this.vel.y * -0.8;
       this.pos.y = height;
-      if (this.pos.y > height) {
-        translate(randam(-5,5),random(-5,5))
-      }
     }
     
     if (this.pos.x > width) {
