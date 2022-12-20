@@ -13,8 +13,10 @@ function mousePressed() {
 function draw() {
   background(220);
   let gravity = createVector(0, 0.1);
-  ball.addForce(gravity);
-
-  ball.update();
-  ball.show();
+  
+  for (let i = 0; i < bubbles.length; i++) {
+    balls[i].addForce(gravity);
+    balls[i].update();
+    balls[i].show();
+  }
 }
