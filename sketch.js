@@ -1,4 +1,4 @@
-let ball;
+let balls = [];
 
 function setup() {
   createCanvas(400, 400);
