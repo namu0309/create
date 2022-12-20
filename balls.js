@@ -1,11 +1,11 @@
 class Ball {
-  constructor() {
-    this.pos = createVector(width/2, height/2);
+  constructor(x,y,r) {
+    this.pos = createVector(x, y);
     this.vel = createVector(0, 0);
     this.acc = createVector(0, 0);
 
     this.c = color(0);
-    this.w = 50;
+    this.w = r;
   }
 
   addForce(aForce) {
