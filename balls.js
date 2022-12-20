@@ -28,6 +28,7 @@ class Ball {
     if (this.pos.y > height) {
       this.vel.y = this.vel.y * -0.8;
       this.pos.y = height;
+      stroke ("red");
 
     }
     
