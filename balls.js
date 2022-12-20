@@ -4,8 +4,9 @@ class Ball {
     this.vel = createVector(0, 0);
     this.acc = createVector(0, 0);
 
-    this.c = color(0, 100);
+    this.c = 0;
     this.w = r;
+    this.lifetime = 255;
   }
 
   addForce(aForce) {
@@ -19,6 +20,7 @@ class Ball {
 
     this.acc.set(0, 0);
     this.pos.x += random(-5,5);
+    this.lifetime -= 5;
   }
 
 
@@ -26,7 +28,6 @@ class Ball {
     if (this.pos.y > height) {
       this.vel.y = this.vel.y * -0.8;
       this.pos.y = height;
-      this.w -= 5;
 
     }
     
@@ -37,13 +38,13 @@ class Ball {
 
 
   show() {
-    fill(this.c);
+    fill(this.c, this.lifetime);
     ellipse(this.pos.x, this.pos.y, this.w, this.w);
   }
 
 
   isDead() {
-    if (this.w < 0.0) {
+    if (this.lifetime < 0) {
       return true;
     } else {
       return false;
