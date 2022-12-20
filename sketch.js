@@ -14,7 +14,7 @@ function draw() {
   background(220);
   let gravity = createVector(0, 0.1);
   
-  for (let i = 0; i < bubbles.length; i++) {
+  for (let i = 0; i < balls.length; i++) {
     balls[i].addForce(gravity);
     balls[i].update();
     balls[i].show();
