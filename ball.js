@@ -2,7 +2,7 @@ class Ball {
   constructor() {
     this.pos = createVector(width/2, height/2);
     this.vel = createVector(0, 0);
-    this.acc = createVector(0, 0.1);
+    this.acc = createVector(0, 0);
 
     this.c = color(0);
     this.w = 50;
@@ -13,7 +13,6 @@ class Ball {
   }
 
   update() {
-    this.acc = createVector(0, 0.1);
     this.checkEdge();
     this.vel.add(this.acc);
     this.pos.add(this.vel);
